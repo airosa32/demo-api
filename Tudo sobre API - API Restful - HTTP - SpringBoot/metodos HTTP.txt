@@ -1,0 +1,63 @@
+HTTP - Existe dois tipos de mensagens(request, response), exp: faz requisição do tipo get, e
+recebe um response de um arquivo json.
+
+
+
+Cada método HTTP tem um significado específico e é usado para realizar diferentes operações 
+em recursos em uma API RESTful:
+
+
+GET: O método GET é usado para recuperar dados de um recurso específico ou de uma coleção de 
+recursos. Ele é seguro e idempotente, o que significa que não deve ter efeitos colaterais e 
+pode ser chamado várias vezes sem alterar o estado do servidor ou do recurso. Por exemplo, 
+uma solicitação GET para /clientes pode retornar uma lista de todos os clientes, enquanto uma 
+solicitação GET para /clientes/123 pode retornar informações sobre um cliente específico com 
+o ID 123.
+
+
+POST: O método POST é usado para criar um novo recurso. Ele envia dados para o servidor para 
+serem processados e armazenados. Uma solicitação POST pode ser usada para enviar dados de 
+formulário, enviar uma carga útil JSON ou enviar qualquer tipo de dados para o servidor. Por 
+exemplo, uma solicitação POST para /clientes pode criar um novo cliente com base nos dados 
+fornecidos no corpo da solicitação.
+
+
+PUT: O método PUT é usado para atualizar um recurso existente ou criar um recurso se ele não 
+existir. Ele substitui completamente o recurso existente pelos dados fornecidos na solicitação. 
+O corpo da solicitação PUT contém a representação completa do recurso atualizado. Por exemplo, 
+uma solicitação PUT para /clientes/123 pode atualizar as informações de um cliente existente com 
+o ID 123.
+
+
+DELETE: O método DELETE é usado para remover um recurso específico. Ele solicita ao servidor que 
+exclua o recurso identificado pela URI fornecida. Uma solicitação DELETE não contém um corpo de 
+mensagem, pois o recurso a ser excluído é identificado pela própria URI. Por exemplo, uma 
+solicitação DELETE para /clientes/123 pode excluir o cliente com o ID 123.
+
+
+Esses são os métodos HTTP comumente usados em APIs RESTful para realizar operações CRUD 
+(Create, Read, Update, Delete) em recursos. Cada método tem um propósito específico e é usado de 
+acordo com a semântica da operação desejada.
+
+
+HEAD: O método HEAD é semelhante ao método GET, mas solicita apenas os cabeçalhos da resposta, 
+sem o corpo da mensagem. É útil para recuperar metadados sobre um recurso sem transferir os dados 
+completos.
+
+
+OPTIONS: O método OPTIONS é usado para obter informações sobre os métodos HTTP permitidos em um 
+recurso específico. Isso pode incluir os métodos permitidos, os cabeçalhos permitidos e outras 
+informações sobre o recurso.
+
+
+PATCH: O método PATCH é usado para aplicar modificações parciais a um recurso. Ele envia um conjunto 
+de instruções de modificação que o servidor deve aplicar ao recurso. Isso é útil quando você deseja 
+atualizar apenas uma parte específica de um recurso, em vez de substituí-lo completamente com o método PUT.
+
+
+TRACE: O método TRACE permite que um cliente solicite que o servidor retorne o que recebeu. Isso é 
+principalmente usado para fins de depuração e diagnóstico.
+
+
+CONNECT: O método CONNECT é usado para criar uma conexão de túnel com o servidor identificado pelo URI 
+de destino. Isso é comumente usado em conjunção com proxies HTTP.

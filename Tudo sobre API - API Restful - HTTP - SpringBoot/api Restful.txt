@@ -1,0 +1,37 @@
+Uma API RESTful (Representational State Transfer) é um estilo de arquitetura de software que define 
+um conjunto de princípios para o design de serviços web baseados em HTTP. As APIs RESTful são 
+projetadas para serem simples, escaláveis, e eficientes, permitindo que sistemas distribuídos se 
+comuniquem de forma uniforme e confiável pela internet.
+
+
+Aqui estão algumas características principais de uma API RESTful:
+
+1 - Comunicação baseada em HTTP: As APIs RESTful usam os métodos HTTP padrão, como GET, POST, PUT, 
+DELETE, etc., para realizar operações CRUD (Create, Read, Update, Delete) em recursos.
+
+
+2 - Utilização de URIs (Uniform Resource Identifiers): Cada recurso é identificado por uma URI 
+única, que é usada para acessar e manipular o recurso. Por exemplo, uma URI pode ser /clientes/123 
+para acessar informações sobre um cliente específico.
+
+
+3 - Transferência de dados em formato padrão: As APIs RESTful geralmente transferem dados em 
+formatos comuns como JSON (JavaScript Object Notation) ou XML (eXtensible Markup Language). Isso 
+torna os dados facilmente legíveis e intercambiáveis entre diferentes sistemas.
+
+
+4 - Stateless (sem estado): As APIs RESTful são stateless, o que significa que cada solicitação do 
+cliente para o servidor contém todas as informações necessárias para o servidor entender e processar 
+a solicitação. O servidor não mantém nenhum estado sobre as sessões do cliente entre solicitações.
+
+
+5 - Operações semânticas sobre recursos: As operações sobre os recursos são semânticas e significam 
+alguma ação sobre o recurso. Por exemplo, uma solicitação GET recupera informações sobre um recurso, 
+uma solicitação POST cria um novo recurso, uma solicitação PUT atualiza um recurso existente, e uma 
+solicitação DELETE remove um recurso.
+
+
+As APIs RESTful são amplamente adotadas devido à sua simplicidade, flexibilidade e escalabilidade. 
+Elas são utilizadas em uma variedade de cenários, incluindo integração de sistemas, desenvolvimento 
+de aplicativos web e mobile, e construção de serviços na nuvem. Ao seguir os princípios de design 
+RESTful, os desenvolvedores podem criar APIs que são fáceis de entender, usar e manter.

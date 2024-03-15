@@ -1,0 +1,69 @@
+Curso: API RESTful com Spring Boot 
+https://lucasangelo.com
+Lucas  ngelo
+
+Instalação das ferramentas
+
+Checklist:
+
+1 - Google Chrome / Microsoft Edge
+
+2 - Conta no Github: https://github.com/signup
+
+3 - Git Bash: https://git-scm.com/downloads 
+git --version
+
+4 - Postman: https://www.postman.com/downloads/
+
+5 - Java JDK (versão LTS 17)
+https://www.oracle.com/java/technologies/javase-downloads.html
+Configurar variáveis de ambiente do sistema
+Painel de Controle -> Variáveis de Ambiente
+JAVA_HOME:
+C:\Program Files\Java\jdk-17.0.2
+Path:
+%JAVA_HOME%\bin
+
+6 - IDE / Editor de Código
+Visual Studio Code (VSCode): https://code.visualstudio.com/ 
+Extensões para o VSCode:
+Extension Pack for Java e Spring Boot Extension Pack: https://code.visualstudio.com/docs/java/extensions 
+Alternativas:
+STS - Spring Tool Suit: https://spring.io/tools 
+IntelliJ IDEA: https://www.jetbrains.com/idea/ (Versão Ultimate grátis para estudantes) 
+Eclipse IDE https://www.eclipse.org/downloads/ 
+
+7 - MySQL Community Server 8: https://dev.mysql.com/downloads/mysql/ 
+Heidisql: https://www.heidisql.com/download.php 
+
+
+8 - Apache Maven (versão >= 3.8.6)
+https://maven.apache.org/download.cgi
+Configurar variáveis de ambiente do sistema
+Painel de Controle -> Variáveis de Ambiente
+MAVEN_HOME:
+C:/Program Files/Maven/apache-maven-3.8.5
+Path:
+%MAVEN_HOME%\bin
+
+9 - Gerador do projeto Spring Boot: https://start.spring.io/ 
+Maven Project
+Spring Boot >= 2.7.2 (Que não seja SNAPSHOT)
+Packaging Jar
+Java 17
+Dependências:
+Parametrizadas no link abaixo
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.2&packaging=jar&jvmVersion=17&groupId=com.lucasangelo&artifactId=todosimple&name=todosimple&description=Spring%20Boot%20API%20for%20To%20Do%20App&packageName=com.lucasangelo.todosimple&dependencies=devtools,web,data-jpa,h2,mysql,validation 
+https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2022-2-MON-CursoAPIJava/commit/ab9a862a6c6fa0668bd2a6cbead71161d59a18b0?diff=unified&w=0#diff-9c5fb3d1b7e3b0f54bc5c4182965c4fe1f9023d449017cece3005d3f90e8e4d8 (ir para o pom.xml + Ctrl C + Ctrl V, corrigindo o pom.xml do spring.io)
+
+10 - Docker Desktop
+Abra o Windows PowerShell como administrador e execute o comando para instalar o WSL:
+wsl --install
+Baixe o pacote de atualização do kernel do Linux:
+https://learn.microsoft.com/pt-br/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
+Instale o Ubuntu pela Microsoft Store:
+https://apps.microsoft.com/store/detail/ubuntu-22042-lts/9PN20MSR04DW
+Baixe o instalador do Docker Desktop, abra e siga os passos padrões de instalação:
+https://docs.docker.com/desktop/windows/wsl/
+

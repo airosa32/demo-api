@@ -1,0 +1,3 @@
+Usa o doc de passo a passo ou o netbeans, netbeans nao precisa fazer nada do passo a passo,
+somente ir em, criar New Project, escolhe formato Java with MAVEN, ai no maven escolhe 
+Project from Archetype, ai la escolhe o "springboot-rest-api" ou "spring-boot-java-rest-aoi-archetype"

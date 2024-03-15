@@ -1,0 +1,41 @@
+Spring Boot é um projeto da família Spring Framework, desenvolvido pela Pivotal Software, que 
+visa simplificar o desenvolvimento de aplicativos Java. Ele fornece uma maneira rápida e fácil 
+de criar aplicativos Java autônomos e de produção, com configuração mínima e sem a necessidade 
+de configuração manual.
+
+
+Algumas características principais do Spring Boot incluem:
+
+1 - Convenção sobre Configuração: Spring Boot segue o princípio de "convenção sobre configuração", 
+o que significa que ele fornece configurações padrão sensatas para muitos aspectos do 
+desenvolvimento de aplicativos. Isso reduz a quantidade de configuração manual necessária e 
+permite que os desenvolvedores se concentrem mais na lógica de negócios do que na configuração.
+
+
+2 - Incorporação de Servidor: Spring Boot permite que os aplicativos Java sejam empacotados como 
+JARs autônomos, que incorporam um servidor web embutido (como Tomcat, Jetty ou Undertow). Isso 
+simplifica a implantação e execução de aplicativos Java, pois não é necessário configurar e 
+gerenciar um servidor web separado.
+
+
+3 - Autoconfiguração: Spring Boot inclui um mecanismo de autoconfiguração que detecta automaticamente 
+as dependências do projeto e configura o aplicativo de acordo. Ele configura automaticamente beans 
+Spring, infraestrutura e componentes com base no ambiente de execução, nas dependências e nas 
+configurações do aplicativo.
+
+
+4 - Geração de Código: Spring Boot inclui ferramentas de geração de código que facilitam a criação de 
+projetos Spring Boot com estrutura e configuração padrão. Por exemplo, o Spring Initializr é uma 
+ferramenta web que permite gerar rapidamente um projeto Spring Boot com as dependências desejadas.
+
+
+5 - Suporte a Microservices: Spring Boot é amplamente utilizado no desenvolvimento de aplicativos de 
+microsserviços devido à sua facilidade de uso e suporte integrado para muitos padrões e tecnologias 
+associadas a microsserviços, como Spring Cloud, Eureka, Ribbon e Hystrix.
+
+
+Em resumo, Spring Boot simplifica o desenvolvimento de aplicativos Java, fornecendo uma estrutura 
+poderosa e fácil de usar que abstrai grande parte da complexidade associada ao desenvolvimento de 
+aplicativos empresariais. Ele é amplamente adotado na comunidade Java e é uma escolha popular para 
+o desenvolvimento de uma variedade de aplicativos, desde aplicativos web simples até sistemas de 
+microsserviços de escala empresarial.

@@ -1,0 +1,25 @@
+			Stateless
+
+Exato. O termo "stateless" refere-se à característica de que o servidor não mantém nenhum estado 
+sobre as sessões dos clientes entre solicitações. Isso significa que cada solicitação do cliente 
+para o servidor deve conter todas as informações necessárias para que o servidor entenda e processe 
+a solicitação, sem depender de nenhum estado mantido pelo servidor de solicitações anteriores.
+
+
+Por exemplo, imagine um servidor de aplicativos web. Quando um cliente faz uma solicitação para o 
+servidor, ele pode incluir informações de autenticação, como um token de acesso, no cabeçalho da 
+solicitação. Com base nessas informações, o servidor pode autenticar o cliente e responder com os 
+dados solicitados.
+
+
+Após enviar a resposta, o servidor não mantém nenhuma informação sobre a sessão do cliente. Se o 
+mesmo cliente fizer outra solicitação posteriormente, ele precisará incluir novamente todas as 
+informações de autenticação necessárias na nova solicitação. O servidor não se lembra de solicitações 
+anteriores do mesmo cliente e não mantém nenhum estado sobre a sessão do cliente.
+
+
+Isso contrasta com modelos de aplicativos que são "stateful" (com estado), onde o servidor mantém 
+um estado sobre a sessão do cliente entre solicitações, o que pode incluir informações como dados 
+de sessão, cookies, ou outros identificadores. Em uma arquitetura stateless, cada solicitação é 
+tratada de forma independente, sem depender de solicitações anteriores. Isso torna a arquitetura 
+mais simples, escalável e fácil de gerenciar.

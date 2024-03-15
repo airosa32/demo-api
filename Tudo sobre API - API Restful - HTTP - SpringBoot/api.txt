@@ -1,0 +1,39 @@
+Ponte entre o browser(cliente) eo servidor.
+
+API significa Interface de Programação de Aplicações (em inglês, Application Programming Interface). 
+É um conjunto de regras e protocolos que permitem que diferentes softwares se comuniquem entre si.
+
+
+Em termos simples, uma API define como os componentes de software devem interagir uns com os outros. 
+Ela fornece um conjunto de métodos, funções e protocolos que podem ser usados por desenvolvedores 
+para acessar e interagir com os serviços e funcionalidades de um software ou sistema externo.
+
+
+Existem diferentes tipos de APIs, incluindo:
+
+1 - APIs da Web: Essas APIs permitem que aplicativos web e serviços web se comuniquem entre si. Elas 
+são frequentemente usadas para integrações entre diferentes sistemas, permitindo que aplicativos 
+acessem dados ou funcionalidades de outros aplicativos pela Internet.
+
+
+2 - APIs de Sistema Operacional: Essas APIs permitem que os aplicativos interajam com o sistema 
+operacional em que estão sendo executados. Por exemplo, uma API de sistema operacional pode 
+fornecer métodos para acessar arquivos, gerenciar processos ou interagir com dispositivos de 
+hardware.
+
+
+3 - APIs de Biblioteca: São APIs que são fornecidas por bibliotecas de software ou frameworks para 
+permitir que os desenvolvedores usem suas funcionalidades em seus próprios aplicativos. Por 
+exemplo, uma biblioteca de processamento de imagens pode fornecer uma API para manipular imagens 
+em um programa.
+
+
+4 - APIs de Serviços na Nuvem: Essas APIs permitem que os desenvolvedores acessem serviços e recursos 
+na nuvem, como armazenamento de arquivos, computação em nuvem, bancos de dados ou serviços de 
+machine learning.
+
+
+As APIs são uma parte fundamental da integração e interoperabilidade de sistemas de software, 
+permitindo que aplicativos se comuniquem e compartilhem dados de maneira eficiente e padronizada. 
+Elas desempenham um papel importante no desenvolvimento de aplicativos modernos e na construção 
+de ecossistemas de software conectados.

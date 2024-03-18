@@ -1,0 +1,10 @@
+{
+    // Serve para indicar quais extensoes usar no vscode
+    // para quem for rodar esse prpojeto
+    "recommendations": [
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-boot-dev-pack",
+        "sohibe.java-generate-setters-getters",
+        "ritwickdey.liveserver"
+    ]
+}

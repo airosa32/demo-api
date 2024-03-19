@@ -14,6 +14,12 @@ import jakarta.validation.constraints.Size;
 import java.util.Objects;
 
 // Um USER tera N TASK
+/*
+ * Tabela Task no campo user_id -> referencia o campo id da 
+ * tabela User, campo user_id -> aceita o mesmo id do User,
+ * indicando que o User pode ter N task, e cada task tera 
+ * seu id unico
+ */
 @Entity
 @Table(name = Task.TABLE_NAME)
 public class Task {

@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 import jakarta.validation.constraints.NotEmpty;
@@ -16,7 +17,8 @@ import jakarta.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
-//import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -55,7 +57,7 @@ public class User {
     @Column(name = "username", unique = true, length = 100, nullable = false)
     private String username;
 
-    // Garante que a senha seja somente de escrita, e nao de leitura,
+    // Garante que a senha seja somente de escrita, e nao de leitura,  
     // nao retorna pro front-end no JSON a senha
     @JsonProperty(access = Access.WRITE_ONLY) 
     @NotNull(groups = {CreateUser.class, UpdateUser.class}) // Nao pode ser nulo
@@ -85,8 +87,10 @@ public class User {
      *      o username, somente a password.
      */
 
-    // usuario tem uma lista de tarefas a se fazer
-    // private List<Task> tasks = new ArrayList<Task>();
+    // Um usuario tem uma lista de tarefas a se fazer
+    // vai ser mapeado pelo user, da classe Task
+    @OneToMany(mappedBy = "user") // Quem é o dono dessa classe TASK
+    private List<Task> tasks = new ArrayList<Task>();
 
 
     public User() {}
@@ -120,6 +124,15 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    public List<Task> getTasks() {
+        return this.tasks;
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
     }
 
 

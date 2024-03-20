@@ -14,6 +14,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -126,7 +127,11 @@ public class User {
         this.password = password;
     }
 
-
+    // Anotação que serve para que quando no controller
+    // quiser busca o USER pelo seu ID, nao retorna 
+    // todas a task dele, entao meio que bloqueia esse 
+    // metodo, a nao ser se utilizar ele diretamente
+    @JsonIgnore
     public List<Task> getTasks() {
         return this.tasks;
     }

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.airosa.demo.models.Task;
 import com.airosa.demo.services.TaskService;
+import com.airosa.demo.services.UserService;
 
 import jakarta.validation.Valid;
 
@@ -67,11 +68,17 @@ public class TaskController {
         return ResponseEntity.noContent().build();
     }
 
+    // Se der um GET na lista de task de um USER, que não
+    // existe, entao, nao retorne uma lista vazia, e sim um erro.
+    @Autowired
+    public UserService userService; 
+
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<Task>> findAllByUserId(
         @PathVariable Long userId) {
-        List<Task> tasks = this.taskService.findAllByUserId(userId);
-        return ResponseEntity.ok().body(tasks);
+            userService.findById(userId); //<---- Return erro aqui.
+            List<Task> tasks = this.taskService.findAllByUserId(userId);
+            return ResponseEntity.ok().body(tasks);
     }
 
     /*

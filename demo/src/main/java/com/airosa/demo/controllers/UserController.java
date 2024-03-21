@@ -34,7 +34,7 @@ import jakarta.validation.Valid;
 // @NotNull e @NotEmpty, vai te que definir esse controler
 // como tipo de validação tambem
 @Validated
-public class UserControlller {
+public class UserController {
     
     // Pra nao precisar usar construtor aqui, utilza o da 
     // propia classe UserService
@@ -65,10 +65,8 @@ public class UserControlller {
         // relacionado com id da entrada da função findById
 
         User obj = this.userService.findById(id);
-        // Ok -> retorna respota 200 
-        // body -> é onde vai chegar o dado da response front-end
-        // mas nao vai esta visivel, so vai servir para aplicação
-        // de resposta.
+        // .body() monta a estrutura para enviar resposta ao  
+        // front-end + os dados da aplicação EXP: arquivo JSon
         return ResponseEntity.ok().body(obj); 
     }
 
@@ -79,14 +77,15 @@ public class UserControlller {
     // na hora de criar/inserir os dados iniciais, tal que
     // esta adicionada ao grupo dos @, nos atributos
     @Validated(CreateUser.class) 
-    // @ResquestBody, passa visualmente os dados no BODY do 
-    // front-end, a onde vai poder ser visivel.
+    // @ResquestBody, indica que esta vindo dados do front-end
     public ResponseEntity<Void> create(@Valid @RequestBody User obj) {
         this.userService.create(obj);
 
         // Qual rota para encontrar esse usuario
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/id").buildAndExpand(obj.getId()).toUri(); 
+        // .build() monta a estrutura para enviar resposta ao 
+        // front-end, como .ok.build() = 200.
         return ResponseEntity.created(uri).build();
     }
 
@@ -114,6 +113,18 @@ public class UserControlller {
     /*
      *  OBS: So passa os dados no BODY, do create e updade.
      *       Get e delete, nao se passa o dado visualmente.
+     * 
+     *  1: @ResquestBody, indica que esta vindo dados do front-end.
+     * 
+     *  2: .build() monta a estrutura para enviar resposta ao 
+     *  front-end, como .ok.build() = 200.
+     * 
+     *  3: .body() monta a estrutura para enviar resposta ao front-end 
+     *  + os dados da aplicação EXP: arquivo JSon
+     * 
+     *  4: .noContent() é usado para indicar que uma solicitação foi 
+     *  processada com sucesso, mas não há conteúdo para retornar como 
+     *  resposta. 
      */
 
 }

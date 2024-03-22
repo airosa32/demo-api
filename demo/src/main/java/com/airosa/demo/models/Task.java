@@ -45,6 +45,23 @@ public class Task {
     @Column(name = "description", length = 255, nullable = false)
     private String description;
 
+    /*
+     *  Todos esses metodos getter e setter e constructor e etc, podem
+     *  sem trocador pelo LOMBOK -> pois ele gera tudo isso automaticamente.
+     * 
+     *  Para usar o LOMBOK, usa o:
+     *  @NoArgsConstructor <- para informa o springboot
+     *  @AllArgsConstructor  <- para informa o uso do LOMBOK
+     *  @Getter
+     *  @Setter
+     *  @EqualsAndHashCode
+     * 
+     *  E tambem implementar ele nas dependencias do pom.xml, e apagar 
+     *  tudo que esta aqui em baixo, pois nao ira precisar mais, pois 
+     *  internamente ele tera implementado os getter... para todas a 
+     *  classes dessa aplicação que utiliza a  dependencia LOMBOK contida 
+     *  no arquivo pom.xml
+     */
 
     public Task() {
     }

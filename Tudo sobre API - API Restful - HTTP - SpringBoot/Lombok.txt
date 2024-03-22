@@ -1,0 +1,35 @@
+
+O Lombok é uma biblioteca Java que oferece diversas anotações para facilitar o desenvolvimento
+de software, reduzindo a quantidade de código boilerplate que os desenvolvedores precisam 
+escrever. Aqui estão alguns dos principais usos e funcionalidades do Lombok:
+
+
+1 - Redução de Boilerplate: O Lombok permite aos desenvolvedores escrever menos código repetitivo, 
+como getters, setters, construtores, métodos equals(), hashCode(), toString(), entre outros.
+
+
+2 - Anotações Úteis: Ele fornece anotações como @Getter e @Setter para gerar automaticamente métodos 
+getters e setters para campos de classe, @NoArgsConstructor e @AllArgsConstructor para criar 
+construtores sem argumentos e com todos os argumentos, respectivamente, @EqualsAndHashCode para 
+gerar métodos equals() e hashCode() com base nos campos da classe, @ToString para gerar 
+automaticamente o método toString() e outras anotações úteis.
+
+
+3 - Imutabilidade: O Lombok possui anotações como @Value para criar classes imutáveis com getters, 
+@With para criar cópias modificadas de objetos imutáveis e @Builder para implementar o padrão de 
+construção fluente.
+
+
+4 - Redução de Verbosidade: Com o Lombok, você pode escrever código mais conciso e legível, eliminando
+ a necessidade de escrever métodos padrão repetitivos manualmente.
+
+
+5 - Integração com IDEs: O Lombok é compatível com várias IDEs populares, como Eclipse, IntelliJ IDEA 
+e NetBeans, facilitando a utilização das anotações e aproveitando seus benefícios durante o desenvolvimento.
+
+
+Em resumo, o Lombok é uma ferramenta muito útil para simplificar o desenvolvimento Java, reduzindo 
+a quantidade de código redundante e aumentando a produtividade dos desenvolvedores.
+
+Não precisa escrever os metodos padrao Getter e Setter construtores etc, o LOMBOK gera isso 
+automaticamente em tempo de build(enquanto o JAVA interpreta o programa e copila).

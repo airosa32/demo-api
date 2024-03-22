@@ -92,7 +92,17 @@ public class User {
     // vai ser mapeado pelo user, da classe Task
     @OneToMany(mappedBy = "user") // Quem é o dono dessa classe TASK
     private List<Task> tasks = new ArrayList<Task>();
-
+    /*
+     * Ao apagar tudo abaixo, e usar o LOMBOK, o getTask(){} tem a propiedade
+     * @JsonIgnore, que ira se perde, e ela serve para nao enviar todas as
+     * task, quando o controller busca o User pelo seu ID, entao ira ter que
+     * fazer modificações no atributo logo acima ^.
+     * 
+     * // Quero apenas fazer escrita ao cadastrar um usuario.
+     * @JsonProperty(access = Access.WRITE_ONLY) <- Quando busca um usuario tem 
+     *                                       que vir o usuario e nao o monte 
+     *                                       de task dele.
+     */
 
     public User() {}
 

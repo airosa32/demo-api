@@ -50,11 +50,12 @@ public class Task {
      *  sem trocador pelo LOMBOK -> pois ele gera tudo isso automaticamente.
      * 
      *  Para usar o LOMBOK, usa o:
-     *  @NoArgsConstructor <- para informa o springboot
-     *  @AllArgsConstructor  <- para informa o uso do LOMBOK
+     *  @NoArgsConstructor <- para informa o springboot, nao utiliza cons...
+     *  @AllArgsConstructor <- para informa o uso do LOMBOK, autocria cons..
      *  @Getter
      *  @Setter
      *  @EqualsAndHashCode
+     *  Ou subistitui tudo acima por @Data
      * 
      *  E tambem implementar ele nas dependencias do pom.xml, e apagar 
      *  tudo que esta aqui em baixo, pois nao ira precisar mais, pois 

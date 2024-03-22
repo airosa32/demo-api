@@ -55,7 +55,8 @@
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId> <!--Add-->
+			<!--Add explicação no Task.java-->
+			<artifactId>lombok</artifactId> 
 			<scope>provide</scope>
 		</dependency>
 

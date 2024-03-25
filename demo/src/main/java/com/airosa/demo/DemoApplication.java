@@ -19,4 +19,12 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
+	/*
+	 * 200 -> ok
+	 * 400... -> algum erro do usuario
+	 * 500... -> problema interno do servidor
+	 * 
+	 * 	Exception Handler -> Capturador de eventos de execeções
+	 */
+
 }

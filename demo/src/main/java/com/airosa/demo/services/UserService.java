@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.airosa.demo.models.User;
 import com.airosa.demo.repositories.TaskRepository;
 import com.airosa.demo.repositories.UserRepository;
+import com.airosa.demo.services.exceptions.DataBindingViolationException;
+import com.airosa.demo.services.exceptions.ObjectNotFoundException;
 
 import jakarta.transaction.Transactional;
 
@@ -59,7 +61,12 @@ public class UserService {
         // nao para a aplicação
         // (ou uma exception -> Utiliza um RuntimeException) para nao parar
         // a aplicação
-        return user.orElseThrow(() -> new RuntimeException(
+
+        /*
+         * Troca RuntimeException() para o ObjectNotFoundException.java,
+         * classe personalizada para tratar esse erro que criamos.
+         */
+        return user.orElseThrow(() -> new ObjectNotFoundException(
             "User não encontrado! Id: " + id + ", Tipo: " + User.class.getName()
         ));
     }
@@ -99,7 +106,6 @@ public class UserService {
         return this.userRepository.save(newOBJ);
     }
     
-    @Transactional
     public void delete(Long id) {
         findById(id);
 
@@ -113,7 +119,11 @@ public class UserService {
         } catch (Exception e) {
             // Usuario nao pode ter relacionamento na hora de
             // ser deletado
-            throw new RuntimeException("Não é possivel excluir pois a entidade relacionada");
+            /*
+             * Troca RuntimeException() para o DataBindingViolationException.java,
+             * classe personalizada para tratar esse erro que criamos.
+             */
+            throw new DataBindingViolationException("Não é possivel excluir pois a entidade relacionada");
         }
     }
 

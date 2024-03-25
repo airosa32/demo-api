@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.airosa.demo.models.Task;
 import com.airosa.demo.models.User;
 import com.airosa.demo.repositories.TaskRepository;
+import com.airosa.demo.services.exceptions.DataBindingViolationException;
+import com.airosa.demo.services.exceptions.ObjectNotFoundException;
 
 import jakarta.transaction.Transactional;
 
@@ -22,7 +24,11 @@ public class TaskService {
 
     public Task findById(Long id) {
         Optional<Task> task = this.taskRepository.findById(id);
-        return task.orElseThrow(() -> new RuntimeException(
+        /*
+         * Troca RuntimeException() para o ObjectNotFoundException.java,
+         * classe personalizada para tratar esse erro que criamos.
+         */
+        return task.orElseThrow(() -> new ObjectNotFoundException(
             "Tarefa não encontrada Id: " + id + ", Tipo: " + Task.class.getName()
         ));
     }
@@ -48,13 +54,16 @@ public class TaskService {
         return this.taskRepository.save(newObj);
     }
 
-    @Transactional
     public void delete(Long id) {
         findById(id);
         try {
             this.taskRepository.deleteById(id);
         } catch (Exception e) {
-            throw new RuntimeException("Não é possivel exluir pois" +
+            /*
+             * Troca RuntimeException() para o DataBindingViolationException.java,
+             * classe personalizada para tratar esse erro que criamos.
+             */
+            throw new DataBindingViolationException("Não é possivel exluir pois" +
             " há entidades relacionadas!");
         }
     }
